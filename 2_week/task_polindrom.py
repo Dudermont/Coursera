@@ -3,11 +3,13 @@ x = 1
 count = 0
 
 while x <= K:
-    while x != 0:
-        c = x % 10
-        print(c, end='')
-        x = x // 10
+    z = x
+    c = 0
+
+    while z != 0:
+        c = c * 10 + z % 10
+        z = z // 10
     if c == x:
         count = count + 1
     x = x + 1
-    print(count)
+print(count)
