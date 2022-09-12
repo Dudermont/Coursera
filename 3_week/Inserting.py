@@ -1,17 +1,9 @@
-s = input()
+s = r = input()
 y = len(s)
 count = 0
-while count != y - 1:
-    q = r[:count + 1]
-    r = r.replace(q, q + '*')
+while count != y:
+    q = s[:count * 2]
+    r = s.replace(q, q + '*', 1)
+    s = r
     count += 1
-    print(r)
-
-
-# i = s.find('h')
-# r = s[::-1]
-# z = r.find('h')
-# j = y - z - 1
-# c = s[i + 1:j]
-#
-# print(s[:i + 1], c.replace('h', 'H'), s[j:], sep='')
+print(s[1:])
